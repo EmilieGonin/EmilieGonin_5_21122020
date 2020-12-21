@@ -1,0 +1,25 @@
+//main:../main.scss
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  &__product {
+    position: relative;
+  }
+  &__img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  &__price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
