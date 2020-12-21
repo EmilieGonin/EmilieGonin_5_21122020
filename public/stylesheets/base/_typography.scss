@@ -1,1 +1,18 @@
 //main:../main.scss
+html {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $horizontal-colors-gradient;
+  }
+}

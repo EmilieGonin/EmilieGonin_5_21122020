@@ -1,0 +1,10 @@
+//main:../main.scss
+.section {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  margin: auto;
+  &__heading {
+    margin: 0;
+  }
+}
