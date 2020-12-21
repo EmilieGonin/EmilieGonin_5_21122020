@@ -1,0 +1,26 @@
+{
+	"version": 3,
+	"file": "main.min.css",
+	"sources": [
+		"main.scss",
+		"abstracts/_variables.scss",
+		"abstracts/_functions.scss",
+		"abstracts/_mixins.scss",
+		"base/_base.scss",
+		"base/_typography.scss",
+		"layout/_header.scss",
+		"layout/_footer.scss"
+	],
+	"sourcesContent": [
+		"@charset \"UTF-8\";\n\n@import\n  'abstracts/variables',\n  'abstracts/functions',\n  'abstracts/mixins',\n  'base/base',\n  'base/typography',\n  'layout/header',\n  'layout/footer';\n",
+		"//main:../main.scss\n",
+		"//main:../main.scss\r\n",
+		"//main:../main.scss\n",
+		"//main:../main.scss\n\nhtml {\n  box-sizing: border-box;\n}\n*, *::before, *::after {\n  box-sizing: inherit;\n}\nbody {\n  margin: 0;\n}\ninput {\n  outline: none;\n}\na {\n  text-decoration: none;\n}\n",
+		"//main:../main.scss\n",
+		"//main:../main.scss\n",
+		"//main:../main.scss\n"
+	],
+	"names": [],
+	"mappings": "AIEA,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,UAAU,CACvB,AACD,AAAA,CAAC,CAAE,CAAC,AAAA,QAAQ,CAAE,CAAC,AAAA,OAAO,AAAC,CACrB,UAAU,CAAE,OAAO,CACpB,AACD,AAAA,IAAI,AAAC,CACH,MAAM,CAAE,CAAC,CACV,AACD,AAAA,KAAK,AAAC,CACJ,OAAO,CAAE,IAAI,CACd,AACD,AAAA,CAAC,AAAC,CACA,eAAe,CAAE,IAAI,CACtB"
+}
