@@ -10,10 +10,10 @@ fetch("http://localhost:3000/api/teddies")
     //Construct html tags with variables
     const nameTag = '<h2 class="products__name">' + name + '</h2>';
     const imgTag = '<img src="' + imageUrl + '" class="products__img" alt="' + name + '">';
-    const priceTag = '<span class="products__price">' + price + '</span>';
+    const priceTag = '<span class="products__price">' + price/100 + '€</span>';
 
     //Create container div
-    let element = document.createElement("div");
+    const element = document.createElement("div");
     element.classList.add("products__product");
     element.innerHTML = nameTag + imgTag + priceTag;
     productsContainer.appendChild(element);
