@@ -1,1 +1,9 @@
 //main:../main.scss
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: $light-color;
+  &__img {
+    height: 200px;
+  }
+}
