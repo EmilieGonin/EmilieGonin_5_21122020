@@ -8,14 +8,18 @@
     position: relative;
   }
   &__name {
+    display: block;
     margin: 0;
   }
   &__img {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border: 2px solid whitesmoke;
+    border-radius: 10px 0;
   }
   &__price {
+    display: block;
     color: $primary-color;
     font-weight: bold;
   }
