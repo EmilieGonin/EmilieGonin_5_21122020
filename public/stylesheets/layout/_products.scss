@@ -3,11 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
   gap: 20px;
   &__product {
     position: relative;
-    cursor: pointer;
+  }
+  &__name {
+    margin: 0;
   }
   &__img {
     width: 150px;
@@ -15,14 +16,7 @@
     object-fit: cover;
   }
   &__price {
-    display: inline-block;
-    position: absolute;
-    width: 40px;
-    line-height: 40px;
-    bottom: -5px;
-    right: -7px;
-    background-color: $primary-color;
-    color: white;
-    border-radius: 50%;
+    color: $primary-color;
+    font-weight: bold;
   }
 }

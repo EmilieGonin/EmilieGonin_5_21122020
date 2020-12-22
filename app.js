@@ -15,7 +15,7 @@ fetch("http://localhost:3000/api/teddies")
     //Create container div
     const element = document.createElement("div");
     element.classList.add("products__product");
-    element.innerHTML = nameTag + imgTag + priceTag;
+    element.innerHTML = imgTag + nameTag + priceTag;
     productsContainer.appendChild(element);
   }
 });
