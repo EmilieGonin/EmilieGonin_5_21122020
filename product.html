@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="product.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/d898f2f582.js" crossorigin="anonymous"></script>
     <title>Orinoco</title>
   </head>
   <body>
@@ -14,6 +15,13 @@
     </header>
 
     <p class="product__return"><a href="index.html">< Retourner à la liste des produits</a></p>
+
+    <div class="cart">
+      <a href="cart.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="">Mon panier</span>
+      </a>
+    </div>
 
     <section class="section">
       <h1 class="section__heading" id="name"></h1>
@@ -24,7 +32,7 @@
           <label for="colors" class="product__color-heading">Choisissez une couleur</label>
           <select class="product__select" name="colors" id="colors"></select>
           <p class="product__price" id="price"></p>
-          <button class="button button--centered">Ajouter au panier</button>
+          <button class="button button--centered" id="add">Ajouter au panier</button>
         </div>
       </div>
     </section>
