@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="public/stylesheets/main.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="product.min.js" defer></script>
+    <title>Orinoco</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="public/images/logo.png" class="header__img" alt="">
+    </header>
+
+    <p class="product__return"><a href="index.html">< Retourner à la liste des produits</a></p>
+
+    <section class="section">
+      <h1 class="section__heading" id="name"></h1>
+      <div class="product__infos">
+        <img src="" alt="" id="image" class="product__img">
+        <div>
+          <p id="description"></p>
+          <label for="colors" class="product__color-heading">Choisissez une couleur</label>
+          <select class="product__select" name="colors" id="colors"></select>
+          <p class="product__price" id="price"></p>
+          <button class="button button--centered">Ajouter au panier</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

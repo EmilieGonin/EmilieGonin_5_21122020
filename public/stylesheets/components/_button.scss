@@ -1,0 +1,8 @@
+//main:../main.scss
+.button {
+  display: block;
+  cursor: pointer;
+  &--centered {
+    margin: auto;
+  }
+}
