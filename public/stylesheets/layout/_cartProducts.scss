@@ -1,6 +1,7 @@
 //main:../main.scss
 .cartProducts {
-  width: 50%;
+  width: 100%;
+  max-width: 400px;
   margin-top: 5px;
   &__product {
     position: relative;
