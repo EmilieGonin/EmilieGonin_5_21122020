@@ -1,0 +1,16 @@
+//main:../main.scss
+.cartProducts {
+  margin-top: 5px;
+  &__product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid whitesmoke;
+    border-radius: 10px 0;
+  }
+}

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="public/stylesheets/main.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="storage.min.js" defer></script>
     <script src="cart.min.js" defer></script>
     <script src="https://kit.fontawesome.com/d898f2f582.js" crossorigin="anonymous"></script>
     <title>Orinoco</title>
@@ -13,5 +14,14 @@
     <header class="header">
       <img src="public/images/logo.png" class="header__img" alt="">
     </header>
+
+    <p class="product__return"><a href="index.html">< Retourner à la liste des produits</a></p>
+
+    <section class="section">
+      <h1 class="section__heading">Panier</h1>
+
+      <div class="cartProducts" id="cart"></div>
+      <button class="button" id="clear">Vider le panier</button>
+    </section>
   </body>
 </html>

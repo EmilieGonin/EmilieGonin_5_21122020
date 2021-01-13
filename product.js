@@ -8,7 +8,7 @@ const imgElement = document.getElementById("image");
 const descriptionElement = document.getElementById("description");
 const priceElement = document.getElementById("price");
 const colorsContainer = document.getElementById("colors");
-const add = document.getElementById("add");
+const ADD_BTN = document.getElementById("add");
 
 //Get product JSON datas
 fetch("http://localhost:3000/api/teddies/" + id)
@@ -28,20 +28,6 @@ fetch("http://localhost:3000/api/teddies/" + id)
     element.setAttribute("value", color);
     colorsContainer.appendChild(element);
   }
-})
 
-//Add product to cart
-function addProduct(id) {
-  if (!localStorage.getItem(id)) {
-    localStorage.setItem(id, 1);
-    let test = localStorage.getItem(id);
-    console.log(test);
-  }
-  else {
-    let num = parseInt(localStorage.getItem(id)) + 1;
-    localStorage.setItem(id, num);
-    let test = localStorage.getItem(id);
-    console.log(test);
-  }
-}
-add.addEventListener("click", () => {addProduct(id)});
+  ADD_BTN.addEventListener("click", () => {addProduct(product)});
+})
