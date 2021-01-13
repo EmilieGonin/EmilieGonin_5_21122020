@@ -20,10 +20,36 @@
     <section class="section">
       <h1 class="section__heading">Panier</h1>
 
-      <div class="cartProducts" id="cart">
-        <div class="cartProducts__total" id="total"></div>
+      <div class="checkout">
+        <div class="cartProducts" id="cart">
+          <div class="cartProducts__total" id="total"></div>
+          <button class="button" id="clear">Vider le panier</button>
+        </div>
+        <form class="form">
+          <h2 class="form__heading">Coordonnées de livraison</h2>
+          <div class="form__field form__field--short">
+            <label for="contact_firstname" class="form__label">Prénom</label>
+            <input type="text" name="contact_firstname" id="contact_firstname" class="form__input" required>
+          </div>
+          <div class="form__field form__field--short">
+            <label for="contact_name" class="form__label">Nom de famille</label>
+            <input type="text" name="contact_name" id="contact_name" class="form__input" required>
+          </div>
+          <div class="form__field">
+            <label for="contact_address" class="form__label">Rue et n° de rue</label>
+            <input type="text" name="contact_address" id="contact_address" class="form__input" required>
+          </div>
+          <div class="form__field">
+            <label for="contact_city" class="form__label">Ville</label>
+            <input type="text" name="contact_city" id="contact_city" class="form__input" required>
+          </div>
+          <div class="form__field">
+            <label for="contact_mail" class="form__label">E-mail</label>
+            <input type="mail" name="contact_mail" id="contact_mail" class="form__input" required>
+          </div>
+          <button class="button">Valider la commande</button>
+        </form>
       </div>
-      <button class="button" id="clear">Vider le panier</button>
     </section>
   </body>
 </html>
