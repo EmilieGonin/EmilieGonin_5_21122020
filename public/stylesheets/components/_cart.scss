@@ -3,4 +3,8 @@
   position: absolute;
   top: 170px;
   right: 10px;
+  &__total {
+    text-align: right;
+    font-weight: bold;
+  }
 }

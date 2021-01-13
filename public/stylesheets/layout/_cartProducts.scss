@@ -1,16 +1,42 @@
 //main:../main.scss
 .cartProducts {
+  width: 50%;
   margin-top: 5px;
   &__product {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
+    border-bottom: 2px solid whitesmoke;
+    margin-bottom: 5px;
+  }
+  &__name {
+    color: $tertiary-color;
+    font-weight: bold;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+  &__product-total {
+    position: absolute;
+    right: 2px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
   &__img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border: 2px solid whitesmoke;
     border-radius: 10px 0;
+  }
+  &__total {
+    text-align: right;
+    font-weight: bold;
+    &::before {
+      content: "TOTAL : ";
+    }
   }
 }
