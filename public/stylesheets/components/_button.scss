@@ -1,7 +1,9 @@
 //main:../main.scss
 .button {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid whitesmoke;
@@ -27,5 +29,9 @@
   }
   &--centered {
     margin: auto;
+  }
+  &__icon {
+    position: absolute!important;
+    right: 10px;
   }
 }
