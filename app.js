@@ -1,4 +1,4 @@
-const productsContainer = document.getElementById("products");
+const PRODUCTS_CONTAINER = document.getElementById("products");
 
 fetch("http://localhost:3000/api/teddies")
 .then(response => response.json())
@@ -8,14 +8,14 @@ fetch("http://localhost:3000/api/teddies")
     const {_id: id, name, price, imageUrl} = teddies[i];
 
     //Construct html tags with variables
-    const nameTag = `<a href="product.html?id=${id}"><h2 class="products__name">${name}</h2></a>`;
-    const imgTag = `<a href="product.html?id=${id}"><img src="${imageUrl}" class="products__img" alt="${name}"></a>`;
-    const priceTag = `<span class="products__price">${price/100}€</span>`;
+    const PRODUCT_IMG = `<a href="product.html?id=${id}"><img src="${imageUrl}" class="products__img" alt="${name}"></a>`;
+    const PRODUCT_NAME = `<a href="product.html?id=${id}"><h2 class="products__name">${name}</h2></a>`;
+    const PRODUCT_PRICE = `<span class="products__price">${price/100}€</span>`;
 
     //Create container div
-    const element = document.createElement("div");
-    element.classList.add("products__product");
-    element.innerHTML = imgTag + nameTag + priceTag;
-    productsContainer.appendChild(element);
+    const PRODUCT_CONTAINER = document.createElement("div");
+    PRODUCT_CONTAINER.classList.add("products__product");
+    PRODUCT_CONTAINER.innerHTML = PRODUCT_IMG + PRODUCT_NAME + PRODUCT_PRICE;
+    PRODUCTS_CONTAINER.appendChild(PRODUCT_CONTAINER);
   }
 });
