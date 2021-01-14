@@ -1,7 +1,30 @@
 //main:../main.scss
 .button {
+  position: relative;
   display: block;
   cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  background: whitesmoke;
+  height: 30px;
+  min-width: 200px;
+  outline-style: auto;
+  outline-color: white;
+  &::after {
+    content: "";
+    background: $horizontal-colors-gradient;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    left: -4px;
+    bottom: -4px;
+    z-index: -1;
+    border-radius: 5px;
+  }
+  &:hover {
+    border: 1px solid darken(whitesmoke, 3%);
+    background: darken(whitesmoke, 3%);
+  }
   &--centered {
     margin: auto;
   }

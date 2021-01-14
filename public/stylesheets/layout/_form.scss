@@ -9,7 +9,7 @@
   max-width: 400px;
   padding: 20px;
   margin-left: 5px;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   background: white;
   &::after {
     content: "";
@@ -20,7 +20,7 @@
     left: -3px;
     bottom: -3px;
     z-index: -1;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
   }
   &__heading {
     margin: auto;
@@ -51,5 +51,16 @@
     left: 5px;
     top: 5px;
     font-size: 13px;
+  }
+  &__button {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    outline: none;
+    &::after {
+      border-radius: 0 0 5px 5px;
+    }
   }
 }

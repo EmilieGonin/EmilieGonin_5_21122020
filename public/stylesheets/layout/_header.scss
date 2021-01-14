@@ -12,6 +12,7 @@
     background: $horizontal-colors-gradient;
   }
   &__img {
-    height: 150px;
+    //height: 150px;
+    max-width: 320px;
   }
 }
