@@ -1,5 +1,9 @@
 //main:../main.scss
 .product {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   &__img-container {
     max-width: 400px;
     height: 400px;
@@ -16,15 +20,31 @@
     width: 100%;
     max-width: 400px;
   }
-  &__infos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
   &__price {
     text-align: center;
     color: $primary-color;
     font-weight: bold;
+  }
+  &__added{
+    position: fixed;
+    top: 180px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: auto;
+    width: 250px;
+    height: 50px;
+    background: lighten($valid-color, 30%);
+    border: 3px solid $valid-color;
+    color: darken($valid-color, 20%);
+    font-weight: bold;
+    z-index: 99;
+    letter-spacing: -0.5px;
+    border-radius: 5px;
+    transition: all 1s;
   }
   &__return {
     margin: 10px;

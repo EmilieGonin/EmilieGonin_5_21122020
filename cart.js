@@ -1,9 +1,8 @@
 const CART_CONTAINER = document.getElementById("cart");
-const CART = JSON.parse(localStorage.getItem("cart"));
 
 if (CART) {
   for (let i = 0; i < CART.length; i++) {
-    const {id, name, price, imageUrl, quantity} = CART[i];
+    const {_id: id, name, price, imageUrl, quantity} = CART[i];
 
     //Create product details tags
     const PRODUCT_IMG = `<a href="product.html?id=${id}"><img src="${imageUrl}" class="cartProducts__img" alt="${name}"></a>`;
@@ -15,11 +14,11 @@ if (CART) {
     PRODUCT_CONTAINER.classList.add("cartProducts__product");
     PRODUCT_CONTAINER.innerHTML = PRODUCT_IMG + PRODUCT_DETAILS + PRODUCT_TOTAL;
     CART_CONTAINER.insertBefore(PRODUCT_CONTAINER, CART_TOTAL_CONTAINER);
+
+    const CLEAR_BTN = document.getElementById("clear");
+    CLEAR_BTN.addEventListener("click", () => {clearCart()});
   }
 }
 else {
   CART_CONTAINER.textContent = "Le panier est vide.";
 }
-
-const CLEAR_BTN = document.getElementById("clear");
-CLEAR_BTN.addEventListener("click", () => {clearCart()});

@@ -28,6 +28,10 @@ fetch("http://localhost:3000/api/teddies/" + id)
     COLORS_CONTAINER.appendChild(COLOR_OPTION);
   }
 
+  const PRODUCT_TO_ADD = product;
+  PRODUCT_TO_ADD.quantity = 1;
+  delete PRODUCT_TO_ADD.colors;
+
   const ADD_BTN = document.getElementById("add");
-  ADD_BTN.addEventListener("click", () => {addProduct(product)});
+  ADD_BTN.addEventListener("click", () => {addProduct(PRODUCT_TO_ADD)});
 })
