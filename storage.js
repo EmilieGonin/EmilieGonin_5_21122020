@@ -6,6 +6,9 @@ const PRODUCT_ADDED = document.getElementById("added");
 if (CART_TOTAL) {
   CART_TOTAL_CONTAINER.textContent = CART_TOTAL + "€";
 }
+else {
+  CART_TOTAL_CONTAINER.textContent = "0,00€";
+}
 
 function addProduct(product) {
   const CART = JSON.parse(localStorage.getItem("cart"));
@@ -35,16 +38,17 @@ function addProduct(product) {
 }
 function updateCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
-  calculateCart(cart);
-}
-function calculateCart(cart) {
   let sum = 0;
   for (const product of cart) {
     sum += (product.price * product.quantity);
   }
 
-  localStorage.setItem("cart_total", sum/100);
-  CART_TOTAL_CONTAINER.textContent = sum/100 + "€";
+  let price = createPrice(sum);
+  localStorage.setItem("cart_total", price);
+  CART_TOTAL_CONTAINER.textContent = price + "€";
+}
+function createPrice(num) {
+  return (num/100).toFixed(2).replace(".", ",");
 }
 function showMessage() {
   PRODUCT_ADDED.classList.remove("hidden");

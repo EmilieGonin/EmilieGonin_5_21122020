@@ -19,7 +19,7 @@ fetch("http://localhost:3000/api/teddies/" + id)
   PRODUCT_IMG.setAttribute("src", imageUrl);
   PRODUCT_IMG.setAttribute("alt", name);
   PRODUCT_DESC.textContent = description;
-  PRODUCT_PRICE.textContent = price/100 + "€";
+  PRODUCT_PRICE.textContent = createPrice(price) + "€";
 
   for (const color of colors) {
     const COLOR_OPTION = document.createElement("option");

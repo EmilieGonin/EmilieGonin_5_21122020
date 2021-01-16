@@ -6,8 +6,8 @@ if (CART) {
 
     //Create product details tags
     const PRODUCT_IMG = `<a href="product.html?id=${id}"><img src="${imageUrl}" class="cartProducts__img" alt="${name}"></a>`;
-    const PRODUCT_DETAILS = `<div class="cartProducts__details"><a href="product.html?id=${id}"><span class="cartProducts__name">${name}</span></a><span class="cartProducts__price">${price/100}€</span></div>`;
-    const PRODUCT_TOTAL = `<div class="cartProducts__product-total"><div class="cartProducts__quantity-box"><span class="cartProducts__quantity-button">-</span><input type="text" class="cartProducts__quantity" value="${quantity}" min="0" maxlength="3" pattern="[0-9]*" required></span><span class="cartProducts__quantity-button">+</span></div><span>${(price/100)*quantity}€</span></div>`
+    const PRODUCT_DETAILS = `<div class="cartProducts__details"><a href="product.html?id=${id}"><span class="cartProducts__name">${name}</span></a><span class="cartProducts__price">${createPrice(price)}€</span></div>`;
+    const PRODUCT_TOTAL = `<div class="cartProducts__product-total"><div class="cartProducts__quantity-box"><span class="cartProducts__quantity-button">-</span><input type="text" class="cartProducts__quantity" value="${quantity}" min="0" maxlength="3" pattern="[0-9]*" required></span><span class="cartProducts__quantity-button">+</span></div><span>${createPrice(price*quantity)}€</span></div>`
 
     //Create product container tag
     const PRODUCT_CONTAINER = document.createElement("div")

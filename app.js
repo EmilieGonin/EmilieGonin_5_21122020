@@ -10,7 +10,7 @@ fetch("http://localhost:3000/api/teddies")
     //Construct html tags with variables
     const PRODUCT_IMG = `<a href="product.html?id=${id}"><img src="${imageUrl}" class="products__img" alt="${name}"></a>`;
     const PRODUCT_NAME = `<a href="product.html?id=${id}"><h2 class="products__name">${name}</h2></a>`;
-    const PRODUCT_PRICE = `<span class="products__price">${price/100}€</span>`;
+    const PRODUCT_PRICE = `<span class="products__price">${createPrice(price)}€</span>`;
 
     //Create container div
     const PRODUCT_CONTAINER = document.createElement("div");
