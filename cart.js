@@ -26,7 +26,7 @@ if (CART) {
           <span class="cartProducts__quantity-button increase" id="increase-${i}">+</span>
           <i class="cartProducts__remove fad fa-times-square" id="remove-button-${i}"></i>
         </div>
-        <span>${createPrice(price*quantity)}€</span>
+        <span id="price-${i}">${createPrice(price*quantity)}€</span>
       </div>
     `;
 
@@ -37,6 +37,7 @@ if (CART) {
     CART_CONTAINER.insertBefore(PRODUCT_CONTAINER, CART_TOTAL_CONTAINER);
 
     //Quantity buttons
+    const PRODUCT_TOTAL_PRICE = document.getElementById("price-" + i);
     const DECREASE_BUTTON = document.getElementById("decrease-" + i);
     const INCREASE_BUTTON = document.getElementById("increase-" + i);
     const QUANTITY = document.getElementById("quantity-" + i);
@@ -45,6 +46,7 @@ if (CART) {
       QUANTITY.value --;
       CART[i].quantity = QUANTITY.value;
       updateCart(CART);
+      PRODUCT_TOTAL_PRICE.textContent = createPrice(price*QUANTITY.value) + "€";
 
       if (QUANTITY.value == 0) {
         PRODUCT_CONTAINER.remove();
@@ -56,6 +58,7 @@ if (CART) {
       QUANTITY.value ++;
       CART[i].quantity = QUANTITY.value;
       updateCart(CART);
+      PRODUCT_TOTAL_PRICE.textContent = createPrice(price*QUANTITY.value) + "€";
     });
 
     //Remove button
