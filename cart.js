@@ -21,12 +21,12 @@ if (CART) {
     const PRODUCT_TOTAL = `
       <div class="cartProducts__product-total">
         <div class="cartProducts__quantity-box">
-          <span class="cartProducts__quantity-button decrease" id="decrease-${i}">-</span>
-          <input type="text" class="cartProducts__quantity" value="${quantity}" min="0" maxlength="3" pattern="[0-9]*" id="quantity-${i}" required />
-          <span class="cartProducts__quantity-button increase" id="increase-${i}">+</span>
-          <i class="cartProducts__remove fad fa-times-square" id="remove-button-${i}"></i>
+          <span class="cartProducts__quantity-button decrease" id="decrease-${id}">-</span>
+          <input type="text" class="cartProducts__quantity" value="${quantity}" min="0" maxlength="3" pattern="[0-9]*" id="quantity-${id}" required />
+          <span class="cartProducts__quantity-button increase" id="increase-${id}">+</span>
+          <i class="cartProducts__remove fad fa-times-square" id="remove-button-${id}"></i>
         </div>
-        <span id="price-${i}">${createPrice(price*quantity)}€</span>
+        <span id="price-${id}">${createPrice(price*quantity)}€</span>
       </div>
     `;
 
@@ -37,15 +37,14 @@ if (CART) {
     CART_CONTAINER.insertBefore(PRODUCT_CONTAINER, CART_TOTAL_CONTAINER);
 
     //Quantity buttons
-    const PRODUCT_TOTAL_PRICE = document.getElementById("price-" + i);
-    const DECREASE_BUTTON = document.getElementById("decrease-" + i);
-    const INCREASE_BUTTON = document.getElementById("increase-" + i);
-    const QUANTITY = document.getElementById("quantity-" + i);
+    const PRODUCT_TOTAL_PRICE = document.getElementById("price-" + id);
+    const DECREASE_BUTTON = document.getElementById("decrease-" + id);
+    const INCREASE_BUTTON = document.getElementById("increase-" + id);
+    const QUANTITY = document.getElementById("quantity-" + id);
 
     DECREASE_BUTTON.addEventListener("click", () => {
       QUANTITY.value --;
-      CART[i].quantity = QUANTITY.value;
-      updateCart(CART);
+      decreaseQuantity(id, CART);
       PRODUCT_TOTAL_PRICE.textContent = createPrice(price*QUANTITY.value) + "€";
 
       if (QUANTITY.value == 0) {
@@ -56,13 +55,12 @@ if (CART) {
 
     INCREASE_BUTTON.addEventListener("click", () => {
       QUANTITY.value ++;
-      CART[i].quantity = QUANTITY.value;
-      updateCart(CART);
+      increaseQuantity(id, CART);
       PRODUCT_TOTAL_PRICE.textContent = createPrice(price*QUANTITY.value) + "€";
     });
 
     //Remove button
-    const REMOVE_BTN = document.getElementById("remove-button-" + i);
+    const REMOVE_BTN = document.getElementById("remove-button-" + id);
     REMOVE_BTN.addEventListener("click", () => {
       PRODUCT_CONTAINER.remove();
       removeProduct(id, CART)});

@@ -1,4 +1,4 @@
-const CART = JSON.parse(localStorage.getItem("cart"));
+let CART = JSON.parse(localStorage.getItem("cart"));
 const CART_TOTAL_CONTAINER = document.getElementById("total");
 const CART_TOTAL = localStorage.getItem("cart_total");
 const PRODUCT_ADDED = document.getElementById("added");
@@ -23,13 +23,11 @@ function addProduct(product) {
   else {
     if (!CART.some(product => product._id == PRODUCT_TO_ADD._id)) {
       CART.push(PRODUCT_TO_ADD);
+      updateCart(CART);
     }
     else {
-      const PRODUCT_INDEX = CART.findIndex(product => product._id == PRODUCT_TO_ADD._id);
-      CART[PRODUCT_INDEX].quantity ++;
+      increaseQuantity(PRODUCT_TO_ADD._id, CART);
     }
-
-    updateCart(CART);
   }
 
   //Show confirmation message when product's added
@@ -67,5 +65,16 @@ function removeProduct(id, cart) {
   }
   else {
     updateCart(newCart);
+    document.location.reload();
   }
+}
+function increaseQuantity(id, cart) {
+  const PRODUCT_INDEX = cart.findIndex(product => product._id == id);
+  cart[PRODUCT_INDEX].quantity ++;
+  updateCart(cart);
+}
+function decreaseQuantity(id, cart) {
+  const PRODUCT_INDEX = cart.findIndex(product => product._id == id);
+  cart[PRODUCT_INDEX].quantity --;
+  updateCart(cart);
 }
