@@ -1,6 +1,7 @@
 //main:../main.scss
 .button {
   position: relative;
+  left: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +29,7 @@
     background: darken(whitesmoke, 3%);
   }
   &--centered {
+    left: 0;
     margin: auto;
   }
   &__icon {

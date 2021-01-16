@@ -5,7 +5,6 @@
   align-items: center;
   padding: 5px;
   border-radius: 0 0 0 10px;
-  z-index: 99;
   background: whitesmoke;
   border-left: 3px solid white;
   border-bottom: 3px solid white;
@@ -17,6 +16,7 @@
     padding-left: 3px;
     padding-bottom: 3px;
     border-radius: 0 0 0 10px;
+    z-index: 99;
   }
   &__icon {
     font-size: 27px;
