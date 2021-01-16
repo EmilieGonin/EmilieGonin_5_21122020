@@ -29,7 +29,6 @@
   }
   &__quantity-box {
     display: flex;
-    //gap: 5px;
   }
   &__quantity {
     text-align: center;
@@ -43,6 +42,12 @@
     width: 20px;
     border: 1px solid $tertiary-color;
     background: fade-out($tertiary-color, 0.9);
+  }
+  &__remove {
+    color: $alert-color;
+    line-height: 21px!important;
+    margin-left: 5px;
+    cursor: pointer;
   }
   &__img {
     width: 100px;

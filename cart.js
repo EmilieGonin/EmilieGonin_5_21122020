@@ -24,6 +24,7 @@ if (CART) {
           <span class="cartProducts__quantity-button decrease" id="decrease-${i}">-</span>
           <input type="text" class="cartProducts__quantity" value="${quantity}" min="0" maxlength="3" pattern="[0-9]*" id="quantity-${i}" required />
           <span class="cartProducts__quantity-button increase" id="increase-${i}">+</span>
+          <i class="cartProducts__remove fad fa-times-square" id="remove-button-${i}"></i>
         </div>
         <span>${createPrice(price*quantity)}€</span>
       </div>
@@ -46,6 +47,7 @@ if (CART) {
       updateCart(CART);
 
       if (QUANTITY.value == 0) {
+        PRODUCT_CONTAINER.remove();
         removeProduct(id, CART);
       }
     });
@@ -55,6 +57,12 @@ if (CART) {
       CART[i].quantity = QUANTITY.value;
       updateCart(CART);
     });
+
+    //Remove button
+    const REMOVE_BTN = document.getElementById("remove-button-" + i);
+    REMOVE_BTN.addEventListener("click", () => {
+      PRODUCT_CONTAINER.remove();
+      removeProduct(id, CART)});
 
     //Clear cart button
     const CLEAR_BTN = document.getElementById("clear");
