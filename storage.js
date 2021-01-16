@@ -18,7 +18,6 @@ function addProduct(product) {
   if (!CART) {
     let newCart = [PRODUCT_TO_ADD];
     updateCart(newCart);
-    console.log("Produit ajouté, le panier était vide.");
   }
   //Check if product's already in cart
   else {
@@ -59,4 +58,14 @@ function showMessage() {
 function clearCart() {
   localStorage.clear();
   CART_CONTAINER.textContent = "Le panier est vide.";
+}
+function removeProduct(id, cart) {
+  let newCart = cart.filter(product => product._id !== id);
+
+  if (newCart.length == 0) {
+    clearCart();
+  }
+  else {
+    updateCart(newCart);
+  }
 }
