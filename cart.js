@@ -1,4 +1,5 @@
 const CART_CONTAINER = document.getElementById("cart");
+const FORM = document.getElementById("form");
 
 if (CART) {
   for (let i = 0; i < CART.length; i++) {
@@ -68,12 +69,20 @@ if (CART) {
     //Clear cart button
     const CLEAR_BTN = document.getElementById("clear");
     CLEAR_BTN.addEventListener("click", () => {clearCart()});
+
+    //Form submit
+    FORM.addEventListener("submit", (e) => {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (CART.length != 0) {
+        order();
+      }
+    });
   }
 }
 else {
   CART_CONTAINER.textContent = "Le panier est vide.";
 
   //Hide form if cart is empty
-  const FORM = document.getElementById("form");
   FORM.classList.add("hidden");
 }

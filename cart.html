@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="storage.min.js" defer></script>
     <script src="cart.min.js" defer></script>
+    <script src="order.min.js" defer></script>
     <script src="https://kit.fontawesome.com/d898f2f582.js" crossorigin="anonymous"></script>
     <title>Orinoco</title>
   </head>
@@ -29,24 +30,24 @@
         <form class="form" id="form">
           <h2 class="form__heading">Coordonnées de facturation</h2>
           <div class="form__field form__field--short">
-            <label for="contact_firstname" class="form__label">Prénom</label>
-            <input type="text" name="contact_firstname" id="contact_firstname" class="form__input" required>
+            <label for="firstName" class="form__label">Prénom</label>
+            <input type="text" name="firstName" id="firstName" class="form__input" required>
           </div>
           <div class="form__field form__field--short">
-            <label for="contact_name" class="form__label">Nom de famille</label>
-            <input type="text" name="contact_name" id="contact_name" class="form__input" required>
+            <label for="lastName" class="form__label">Nom de famille</label>
+            <input type="text" name="lastName" id="lastName" class="form__input" required>
           </div>
           <div class="form__field">
-            <label for="contact_address" class="form__label">Rue et n° de rue</label>
-            <input type="text" name="contact_address" id="contact_address" class="form__input" required>
+            <label for="address" class="form__label">Rue et n° de rue</label>
+            <input type="text" name="address" id="address" class="form__input" required>
           </div>
           <div class="form__field">
-            <label for="contact_city" class="form__label">Ville</label>
-            <input type="text" name="contact_city" id="contact_city" class="form__input" required>
+            <label for="city" class="form__label">Ville</label>
+            <input type="text" name="city" id="city" class="form__input" required>
           </div>
           <div class="form__field">
-            <label for="contact_mail" class="form__label">E-mail</label>
-            <input type="email" name="contact_mail" id="contact_mail" class="form__input" required>
+            <label for="email" class="form__label">E-mail</label>
+            <input type="email" name="email" id="email" class="form__input" required>
           </div>
           <button class="button form__button">
             Valider la commande

@@ -1,4 +1,4 @@
-let CART = JSON.parse(localStorage.getItem("cart"));
+const CART = JSON.parse(localStorage.getItem("cart"));
 const CART_TOTAL_CONTAINER = document.getElementById("total");
 const CART_TOTAL = localStorage.getItem("cart_total");
 const PRODUCT_ADDED = document.getElementById("added");
@@ -11,7 +11,6 @@ else {
 }
 
 function addProduct(product) {
-  const CART = JSON.parse(localStorage.getItem("cart"));
   const PRODUCT_TO_ADD = product;
 
   //Check if CART is empty (null)
@@ -77,4 +76,16 @@ function decreaseQuantity(id, cart) {
   const PRODUCT_INDEX = cart.findIndex(product => product._id == id);
   cart[PRODUCT_INDEX].quantity --;
   updateCart(cart);
+}
+function getProductsIds() {
+  const PRODUCTS = [];
+
+  for (const product of CART) {
+    while (product.quantity > 0) {
+      PRODUCTS.push(product._id);
+      product.quantity --;
+    }
+  }
+
+  return PRODUCTS;
 }
