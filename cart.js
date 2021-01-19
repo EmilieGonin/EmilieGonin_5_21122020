@@ -72,4 +72,8 @@ if (CART) {
 }
 else {
   CART_CONTAINER.textContent = "Le panier est vide.";
+
+  //Hide form if cart is empty
+  const FORM = document.getElementById("form");
+  FORM.classList.add("hidden");
 }
