@@ -55,6 +55,7 @@ function showMessage() {
 function clearCart() {
   localStorage.clear();
   CART_CONTAINER.textContent = "Le panier est vide.";
+  FORM.classList.add("hidden");
 }
 function removeProduct(id, cart) {
   let newCart = cart.filter(product => product._id !== id);
