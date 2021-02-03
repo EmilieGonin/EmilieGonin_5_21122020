@@ -1,3 +1,4 @@
+const CART = JSON.parse(localStorage.getItem("cart"));
 const CART_CONTAINER = document.getElementById("cart");
 const FORM = document.getElementById("form");
 
