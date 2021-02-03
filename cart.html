@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/stylesheets/main.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="storage.min.js" defer></script>
-    <script src="cart.min.js" defer></script>
-    <script src="order.min.js" defer></script>
-    <script src="https://kit.fontawesome.com/d898f2f582.js" crossorigin="anonymous"></script>
-    <title>Orinoco</title>
-  </head>
-  <body>
-    <header class="header">
-      <img src="public/images/logo.png" class="header__img" alt="">
-    </header>
 
-    <p class="product__return"><a href="index.html">< Retourner à la liste des produits</a></p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/stylesheets/main.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="storage.min.js" defer></script>
+  <script src="cart.min.js" defer></script>
+  <script src="order.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/d898f2f582.js" crossorigin="anonymous"></script>
+  <title>Orinoco</title>
+</head>
 
-    <section class="section">
-      <h1 class="section__heading">Panier</h1>
+<body>
+  <header class="header">
+    <img src="public/images/logo.png" class="header__img" alt="">
+  </header>
 
-      <div class="checkout">
-        <div class="cartProducts" id="cart">
-          <div class="cartProducts__total" id="total"></div>
-          <button class="button" id="clear">Vider le panier</button>
-        </div>
-        <form class="form" id="form">
-          <h2 class="form__heading">Coordonnées de facturation</h2>
-          <div class="form__field form__field--short">
-            <label for="firstName" class="form__label">Prénom</label>
-            <input type="text" name="firstName" id="firstName" class="form__input" required>
-          </div>
-          <div class="form__field form__field--short">
-            <label for="lastName" class="form__label">Nom de famille</label>
-            <input type="text" name="lastName" id="lastName" class="form__input" required>
-          </div>
-          <div class="form__field">
-            <label for="address" class="form__label">Rue et n° de rue</label>
-            <input type="text" name="address" id="address" class="form__input" required>
-          </div>
-          <div class="form__field">
-            <label for="city" class="form__label">Ville</label>
-            <input type="text" name="city" id="city" class="form__input" required>
-          </div>
-          <div class="form__field">
-            <label for="email" class="form__label">E-mail</label>
-            <input type="email" name="email" id="email" class="form__input" required>
-          </div>
-          <button class="button form__button">
-            Valider la commande
-            <i class="button__icon fas fa-arrow-right"></i>
-          </button>
-        </form>
+  <p class="product__return"><a href="index.html">
+      < Retourner à la liste des produits</a>
+  </p>
+
+  <section class="section">
+    <h1 class="section__heading">Panier</h1>
+
+    <div class="checkout">
+      <div class="cartProducts" id="cart">
+        <div class="cartProducts__total" id="total"></div>
+        <button class="button" id="clear">Vider le panier</button>
       </div>
-    </section>
-  </body>
+      <form class="form" id="form">
+        <h2 class="form__heading">Coordonnées de facturation</h2>
+        <div class="form__field form__field--short">
+          <label for="firstName" class="form__label">Prénom</label>
+          <input type="text" name="firstName" id="firstName" class="form__input" required>
+        </div>
+        <div class="form__field form__field--short">
+          <label for="lastName" class="form__label">Nom de famille</label>
+          <input type="text" name="lastName" id="lastName" class="form__input" required>
+        </div>
+        <div class="form__field">
+          <label for="address" class="form__label">Rue et n° de rue</label>
+          <input type="text" name="address" id="address" class="form__input" required>
+        </div>
+        <div class="form__field">
+          <label for="city" class="form__label">Ville</label>
+          <input type="text" name="city" id="city" class="form__input" required>
+        </div>
+        <div class="form__field">
+          <label for="email" class="form__label">E-mail</label>
+          <input type="email" name="email" id="email" class="form__input" required>
+        </div>
+        <button class="button form__button">
+          Valider la commande
+          <i class="button__icon fas fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+</body>
+
 </html>
